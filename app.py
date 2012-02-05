@@ -27,7 +27,7 @@ class Etul(webapp.RequestHandler, ResponseMixin):
             if duration < '00:10:00' :
                 item.parentNode.removeChild(item)
         
-        self.render_xml(podcast)
+        self.render(podcast)
 
 
 application = webapp.WSGIApplication([('/', MainPage), ('/etul.xml', Etul)])
